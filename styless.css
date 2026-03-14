@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    color: grey;
+}
+
+.app {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 22px;
+}
