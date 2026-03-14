@@ -12,8 +12,25 @@
             <p>Vytvoř si vlastní závodní trať pro autíčka</p>
         </header>
 
-        
-    
+        <section id ="menuScreen" class="screen card">
+            <h2> Hlavní menu </h2>
+            <p class="screen text">
+                Vyber, jestli chceš vytvořit novou trať, nebo načíst již existující.
+            </p>
+
+            <div class="menu-buttons">
+                <button id="newTrackBtn" class="main-btn">Nová trať</button>
+                <button id="showLoadBtn" class="secondary-btn">Načíst trať</button>
+            </div>
+
+            <div id="loadScreen" class="hidden">
+                <h3>Načíst trať</h3>
+                <p class="screen text">Vyber trať, kterou chceš načíst:</p>
+                <div id="savedMapsList" class="saved-maps-list">
+                </div>
+            </div>
+        </section>
+
     <script src="script.js"></script>
 </body>
 </html>
