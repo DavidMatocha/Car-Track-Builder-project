@@ -87,7 +87,152 @@ body {
     background: #2563eb;
 }
 
+.secondary-btn:hover {
+  background: #d1d5db;
+}
+.danger-btn:hover {
+  background: #dc2626;
+}
+.full {
+  width: 100%;
+}
 
+.load-panel {
+  margin-top: 24px;
+  text-align: left;
+}
 
+.saved-maps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.saved-map-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #dbe3ee;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.saved-map-name {
+  font-weight: bold;
+}
+
+.saved-map-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.editor-layout {
+  display: grid;
+}
+
+.sidebar h2, .workspace {
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+.load-panel h3, .section-block h3 {
+  margin-top: 0;
+}
+
+.section-block {
+  margin-bottom: 24px;
+}
+
+#mapNameInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.tool-palette {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tool-btn {
+  background: #f3f4f6;
+  color: #111827;
+  text-align: left;
+  border: 2px solid transparent;
+}
+
+.tool-btn:hover {
+  background: #e5e7eb;
+}
+
+.tool-btn.active {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+.active-tool-text {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+.workspace-header {
+  margin-bottom: 18px;
+}
+
+.workspace-header p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(20, 28px);
+grid-template-rows: repeat(20, 28px);
+gap: 2px;
+justify-content: center;
+margin: 0 auto;
+}
+
+.cell {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  transition: 0.15s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+.road-straight{
+background:#ff9900;
+}
+
+.road-turn{
+background:#ff00dd;
+border-radius:6px;
+}
+
+.road-cross{
+background:#ff0000;
+}
+
+.water{
+background:#58aafc;
+}
+
+.grass{
+background:#6fcf6a;
+}
 
 

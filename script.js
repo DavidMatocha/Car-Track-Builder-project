@@ -1,64 +1,90 @@
-const menuScreen = document.getElementById('menu-screen');
-const newTrackButton = document.getElementById('new-track-button');
-const editorScreen = document.getElementById('editor-screen');
+const menuScreen = document.getElementById('menuScreen');
+const newTrackButton = document.getElementById('newTrackButton');
+const editorScreen = document.getElementById('editorScreen');
 
-const newTrackBtn = document.getElementById('new-track-btn');
-const saveMapBtn = document.getElementById('save-map-btn');
-const showLoadBtn = document.getElementById('show-load-btn');
-const backToMenuBtn = document.getElementById('back-to-menu-btn');
-const clearMapBtn = document.getElementById('clear-map-btn');
+const newTrackBtn = document.getElementById('newTrackBtn');
+const saveMapBtn = document.getElementById('saveMapBtn');
+const showLoadBtn = document.getElementById('showLoadBtn');
+const backToMenuBtn = document.getElementById('backToMenuBtn');
+const clearMapBtn = document.getElementById('clearMapBtn');
 
-const mapNameInput = document.getElementById('map-name-input');
-const savedMapsList = document.getElementById('saved-maps-list');
-const loadScreen = document.getElementById('load-screen');
+const mapNameInput = document.getElementById('mapNameInput');
+const savedMapsList = document.getElementById('savedMapsList');
+const loadScreen = document.getElementById('loadScreen');
 
-const gird = document.getElementById('grid');
-const toolButtons = document.querySelectorAll('.tool-button');
-const activeToolText = document.getElementById('active-tool');
+const grid = document.getElementById('grid');
+const toolButtons = document.querySelectorAll('.tool-btn');
+const activeToolText = document.getElementById('activeToolText');
 
 const gridSize = 20;
+const storageKey = 'carTrackBuilderMaps';
 
 
-let currentTrack = null;
 
+let currentTool = "grass";
+let mapData = [];
 
-function createGrid() {
-    const grid = document.createElement('div');
-    grid.classList.add('grid');
-    for (let i = 0; i < gridSize * gridSize; i++) {
-        const cell = document.createElement('div');
-        cell.classList.add('cell');
-        cell.addEventListener('click', () => {
-            cell.classList.toggle('track');
-            if (cell.classList.contains('track')) {
-                if (!currentTrack) currentTrack = [];
-                currentTrack.push(i);
-            } else {
-                if (currentTrack) {
-                    currentTrack = currentTrack.filter(index => index !== i);
-                    if (currentTrack.length === 0) currentTrack = null;
-                }
-            }
+function createEmptyMap() {
+    const newTrack = [];
+    for (let y = 0; y < gridSize; y++) {
+        const row = [];
+        for (let x = 0; x < gridSize; x++) {
+            row.push("grass");
         }
-        );
-        grid.appendChild(cell);
+        newTrack.push(row);
     }
-    return grid;
+    return newTrack;
 }
 
+function renderGrid() {
+    grid.innerHTML = '';
+    for (let y = 0; y < gridSize; y++) {
+        for (let x = 0; x < gridSize; x++) {
+            const cell = document.createElement('div');
+            cell.classList.add('grid-cell');
+            cell.dataset.x = x;
+            cell.dataset.y = y;
+            cell.style.backgroundImage = `url('assets/${mapData[y][x]}.png')`;
+            grid.appendChild(cell);
+        }
+    }
+}
 
-startButton.addEventListener('click', () => {
-    menuScreen.style.display = 'none';
-    gameScreen.style.display = 'block';
-});
-newTrackBtn.addEventListener('click', () => {
-    currentTrack = null;
-    console.log('New track created');
-});
-saveMapBtn.addEventListener('click', () => {
-    if (currentTrack) {
-        console.log('Track saved:', currentTrack);  
-    } else {
-        console.log('No track to save');
+function showEditor() {
+    menuScreen.classList.add('hidden');
+    editorScreen.classList.remove('hidden');
+    mapData = createEmptyMap();
+    renderGrid();
+}
+
+function showMenu() {
+    editorScreen.classList.add('hidden');
+    menuScreen.classList.remove('hidden');
+}
+
+function updateActiveTool() {
+    toolButtons.forEach(function(button) {
+        
+
+
+
+
+        if (button.dataset.type === currentTool) {
+            button.classList.add('active');
+
     }
 });
+    if (currentTool === "grass") {
+        activeToolText.textContent = "Aktuální nástroj: Tráva";
+    }  if (currentTool === "road") {
+        activeToolText.textContent = "Aktuální nástroj: Silnice";
+    }  if (currentTool === "water") {
+        activeToolText.textContent = "Aktuální nástroj: Voda";
+    }  if (currentTool === "road_straight") {
+        activeToolText.textContent = "Aktuální nástroj: Rovná silnice";
+    }  if (currentTool === "road_turn") {
+        activeToolText.textContent = "Aktuální nástroj: Zatáčka";
+    } if (currentTool === "road_cross") {
+        activeToolText.textContent = "Aktuální nástroj: Křižovatka";
+    }
+}
