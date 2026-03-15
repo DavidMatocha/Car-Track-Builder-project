@@ -1,9 +1,20 @@
-const menuScreen = document.querySelector('.menu-screen');
-const startButton = document.querySelector('.start-button');
-const gameScreen = document.querySelector('.game-screen');
+const menuScreen = document.getElementById('menu-screen');
+const newTrackButton = document.getElementById('new-track-button');
+const editorScreen = document.getElementById('editor-screen');
 
-const newTrackBtn = document.querySelector('.new-track-btn');
-const saveMapBtn = document.querySelector('.save-map-btn');
+const newTrackBtn = document.getElementById('new-track-btn');
+const saveMapBtn = document.getElementById('save-map-btn');
+const showLoadBtn = document.getElementById('show-load-btn');
+const backToMenuBtn = document.getElementById('back-to-menu-btn');
+const clearMapBtn = document.getElementById('clear-map-btn');
+
+const mapNameInput = document.getElementById('map-name-input');
+const savedMapsList = document.getElementById('saved-maps-list');
+const loadScreen = document.getElementById('load-screen');
+
+const gird = document.getElementById('grid');
+const toolButtons = document.querySelectorAll('.tool-button');
+const activeToolText = document.getElementById('active-tool');
 
 const gridSize = 20;
 

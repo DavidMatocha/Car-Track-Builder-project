@@ -23,7 +23,7 @@
                 <button id="showLoadBtn" class="secondary-btn">Načíst trať</button>
             </div>
 
-            <div id="loadScreen" class="hidden">
+            <div id="loadScreen" class="load-screen hidden">
                 <h3>Načíst trať</h3>
                 <p class="screen text">Vyber trať, kterou chceš načíst:</p>
                 <div id="savedMapsList" class="saved-maps-list">
@@ -59,13 +59,20 @@
                             </div>
 
                             <div class="section-block">
+                                <h3>Uložení</h3>
+                                <input type="text" id="mapNameInput" placeholder="Název mapy">
+                                <button id="saveMapBtn" class="main-btn full">Uložit mapu</button>
+                            </div>
+
+                            <div class="section-block">
                                 <h3>Akce</h3>
                                 <button id="clearMapBtn" class="secondary-btn full">Vyčistit mapu</button>
                                 <button id="backToMenuBtn" class="danger-btn full">Zpět do menu</button>
                             </div>
                         </aside>
 
-                <main class="map-editor card">
+                <main class="workspace card">
+                    <div class="workspace-header">
                     <h2> Návrh trati </h2>
                     <p> Kliknitím na pole v mřížce, vytvořím silnici, zatáčku, křižovatku, vodu nebo trávu. </p>
                     </div>

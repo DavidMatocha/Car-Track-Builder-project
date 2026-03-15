@@ -62,3 +62,32 @@ body {
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
+
+.main-btn, .secondary-btn, .danger-btn, .tool-btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.main-btn {
+    background: #3b82f6;
+    color: white;
+}
+.secondary-btn {
+    background: #e5e7eb;
+    color: #374151;
+}
+.danger-btn {
+    background: #ef4444;
+    color: white;
+}
+.main-btn:hover {
+    background: #2563eb;
+}
+
+
+
+
+
