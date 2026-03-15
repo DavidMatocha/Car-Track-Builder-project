@@ -64,14 +64,12 @@ function showMenu() {
 
 function updateActiveTool() {
     toolButtons.forEach(function(button) {
-        
+    button.classList.remove("active");
+  });
 
-
-
-
-        if (button.dataset.type === currentTool) {
-            button.classList.add('active');
-
+    toolButtons.forEach(function (button) {
+    if (button.dataset.type === currentTool) {
+      button.classList.add("active");
     }
 });
     if (currentTool === "grass") {
@@ -88,3 +86,68 @@ function updateActiveTool() {
         activeToolText.textContent = "Aktuální nástroj: Křižovatka";
     }
 }
+
+function saveMap() {
+    const savedMapsText = localStorage.getItem(storageKey);
+
+    if (!savedMapsText) {
+        return {};
+    }
+    return JSON.parse(savedMapsText);
+}
+
+function saveAllMaps(allMaps) {
+    localStorage.setItem(storageKey, JSON.stringify(allMaps));
+}
+
+function saveCurrentMap() {
+    const mapName = mapNameInput.value.trim();
+    if (mapName === '') {
+        alert("Zadej název mapy!");
+        return;
+    }
+
+    const allMaps = saveMap();
+    allMaps[mapName] = mapData;
+    saveAllMaps(allMaps);
+    alert("Mapa uložena!");
+    renderSavedMaps();
+}
+
+function loadMapBYName(mapName) {
+    const allMaps = saveMap();
+    if (!allMaps[mapName]) {
+        alert("Mapa nenalezena!");
+        return;
+    }
+
+    mapData = allMaps[mapName];
+    mapNameInput.value = mapName;
+    renderGrid();
+    alert("Mapa načtena!");
+    showEditor();
+}
+
+function deleteMap(mapName) {
+    const allMaps = saveMap();
+    delete allMaps[mapName];
+    saveAllMaps(allMaps);
+    alert("Mapa smazána!");
+    renderSavedMaps();
+}
+
+function renderSavedMaps() {
+    const allMaps = saveMap();
+    const mapNames = Object.keys(allMaps);
+    savedMapsList.innerHTML = '';
+    if (mapNames.length === 0) {
+        savedMapsList.innerHTML = '<p class="text">Žádné uložené mapy</p>';
+        return;
+    }
+    mapNames.forEach(function(mapName) {
+        const mapItem = document.createElement('div');
+        mapItem.classList.add('saved-map-item');
+
+        const name = document.createElement("div");
+        name.classList.add("saved-map-name");
+        name.textContent = mapName;
