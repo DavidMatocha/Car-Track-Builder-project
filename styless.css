@@ -37,3 +37,28 @@ body {
     display: none;
 }
 
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menuScreen {
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+.screen-text {
+    color: #4b5563;
+    margin-bottom: 20px;
+}
+.menu-button {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
