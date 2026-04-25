@@ -1,28 +1,42 @@
-# 📚 Přehled četby – tabulka
+# 📚 Přehled četby – chronologicky
 
 | Autor | Dílo | Století | Směr | Druh | Žánr |
 |------|------|--------|------|------|------|
-| William Shakespeare | Romeo a Julie | 16.–17. | renesance | drama | tragédie |
 | William Shakespeare | Hamlet | 16.–17. | renesance | drama | tragédie |
+| William Shakespeare | Romeo a Julie | 16.–17. | renesance | drama | tragédie |
 | Molière | Lakomec | 17. | klasicismus | drama | komedie |
 | Karel Hynek Mácha | Máj | 19. | romantismus | lyricko-epický | básnická skladba |
 | Karel Jaromír Erben | Kytice | 19. | romantismus | lyricko-epický | balady |
 | Karel Havlíček Borovský | Tyrolské elegie | 19. | realismus | lyrika | satira |
 | Nikolaj V. Gogol | Revizor | 19. | realismus | drama | komedie |
 | Viktor Dyk | Krysař | 20. | symbolismus | próza | novela |
-| Erich Maria Remarque | Na západní frontě klid | 20. | ztracená generace | próza | román |
-| Antoine de Saint-Exupéry | Malý princ | 20. | existencialismus | próza | filozofická pohádka |
-| Ernest Hemingway | Stařec a moře | 20. | realismus | próza | novela |
-| George Orwell | 1984 | 20. | antiutopie | próza | román |
-| George Orwell | Farma zvířat | 20. | antiutopie | próza | alegorie |
-| Bohumil Hrabal | Ostře sledované vlaky | 20. | postmodernismus | próza | novela |
-| Ota Pavel | Smrt krásných srnců | 20. | realismus | próza | povídky |
 | Franz Kafka | Proměna | 20. | existencialismus | próza | novela |
 | Karel Čapek | R.U.R. | 20. | modernismus | drama | drama |
+| Erich Maria Remarque | Na západní frontě klid | 20. | ztracená generace | próza | román |
 | Romain Rolland | Petr a Lucie | 20. | realismus | próza | novela |
+| Antoine de Saint-Exupéry | Malý princ | 20. | existencialismus | próza | filozofická pohádka |
+| George Orwell | Farma zvířat | 20. | antiutopie | próza | alegorie |
+| George Orwell | 1984 | 20. | antiutopie | próza | román |
 | John Steinbeck | O myších a lidech | 20. | realismus | próza | novela |
+| Ernest Hemingway | Stařec a moře | 20. | realismus | próza | novela |
+| Bohumil Hrabal | Ostře sledované vlaky | 20. | postmodernismus | próza | novela |
+| Ota Pavel | Smrt krásných srnců | 20. | realismus | próza | povídky |
 | Karel Čapek | Bílá nemoc | 20. | modernismus | drama | drama |
 
+---
+
+## 🧠 Jak si to zapamatovat
+- **nejdřív drama (Shakespeare, Molière)**  
+- pak **romantismus (Mácha, Erben)**  
+- pak **realismus (Gogol, Borovský)**  
+- pak **20. století = války + totalita + filozofie**
+
+---
+
+## 🎯 Ultra rychlá osa
+👉 renesance → klasicismus → romantismus → realismus → 20. století
+
+Tohle když řekneš u maturity, jsi safe 👍
 ---
 
 ## 🧠 Mini tahák (k tabulce)
